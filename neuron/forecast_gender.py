@@ -12,7 +12,7 @@ if __name__=='__main__':
     data = data[['Q1_性别', 'Q2_身高（厘米）','Q3_体重（斤）','Q4_学号']]
     scaled_data = data.copy()
     scaled_data['Q1_性别'] = (scaled_data['Q1_性别']=='女') * 1
-    scaled_data['Q3_体重（斤）'] = data['Q3_体重（斤）'] - data['Q3_体重（斤）'].mean()
+    scaled_data['Q3_体重（斤）'] = (data['Q3_体重（斤）'] - data['Q3_体重（斤）'].mean())
     scaled_data['Q2_身高（厘米）'] = data['Q2_身高（厘米）'] - data['Q2_身高（厘米）'].mean()
 
     training_set = scaled_data[(scaled_data.index+1)%2==1]

@@ -69,9 +69,9 @@ class OurNeuralNetwork:
         #
         # return out_o1
 
-    def train(self, data, all_y_trues):
-        learn_rate = 0.1
-        epochs = 1000  # number of times to loop through the entire dataset
+    def train(self, data, all_y_trues, epochs=1000, lr=0.1):
+        learn_rate = lr
+        epochs = epochs  # number of times to loop through the entire dataset
         pic_x = []
         pic_y = []
         for epoch in range(epochs):
